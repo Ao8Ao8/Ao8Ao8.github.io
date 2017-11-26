@@ -42,25 +42,25 @@
     			<p>AaOAoa<br>aoAOaoAAOaoaOA</p>
     		</div>
     	</div>
-    	<a href="#ancor" class="main-down"><i class="icon-down"></i></a>
+    	<a href="#portfolio" class="main-down slowly"><i class="icon-down"></i></a>
     </div>
     
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
     	<div class="container">
     		<h2 class="section-header">
-    			<a href="#" name="ancor" class="ancor"></a>Portfolio
+    			<a href="#"></a>Portfolio
     		</h2>
     		<div class="row" >
     			<div class="col-md-4">
-    				<div class="portfolio-block"><img src="img/port/1.jpg" alt="Work #1">
+    				<div class="portfolio-block"><img src="img/portfolio/1.jpg" alt="Work #1">
     					<a data-toggle="modal" data-work='work-1' href="#work">Watch this work</a></div>
     			</div>
     			<div class="col-md-4">
-    				<div class="portfolio-block"><img src="img/port/2.jpg" alt="Work #2">
+    				<div class="portfolio-block"><img src="img/portfolio/2.jpg" alt="Work #2">
     					<a data-toggle="modal" data-work='work-2' href="#work">Watch this work</a></div>
     			</div>
     			<div class="col-md-4">
-    				<div class="portfolio-block"><img src="img/port/3.jpg" alt="Work #3">
+    				<div class="portfolio-block"><img src="img/portfolio/3.jpg" alt="Work #3">
     					<a data-toggle="modal" data-work='work-3' href="#work">Watch this work</a></div>
     			</div>
     		</div>
@@ -116,6 +116,18 @@
               modal.find('.modal-body').load(work+'.html');
           });
       });
+    </script>
+    <script>
+    	$(document).ready(function() {
+
+    		$(".slowly").on("click", function (event) {
+    			event.preventDefault();
+    			var id = $(this).attr('href'),
+    			top = $(id).offset().top;
+    			$('body,html').animate({scrollTop: top}, 700);	
+    		});
+
+    	});
     </script>
   </body>
 </html>
